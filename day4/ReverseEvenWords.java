@@ -2,7 +2,7 @@ package org.test;
 
 public class ReverseEvenWords {
 	public static void main(String[] args) {
-		String text = "hello, I am a Software tester";
+		String text = "I am a Software tester";
 //		 I ma a erawtfas Tester
 		String[] split = text.split(" ");
 		String rev = "";
