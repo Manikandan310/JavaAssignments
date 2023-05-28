@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.Select;
 public class CreateContact {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		ChromeDriver driver = new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/login");
@@ -16,8 +15,8 @@ public class CreateContact {
 		WebElement username= driver.findElement(By.id("username"));
 		username.sendKeys("DemoSalesManager");
         
-        WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys("crmsfa");
+                WebElement password = driver.findElement(By.id("password"));
+                password.sendKeys("crmsfa");
         
 		WebElement loginButton = driver.findElement(By.className("decorativeSubmit"));
 		loginButton.click();
@@ -32,31 +31,31 @@ public class CreateContact {
 		createContactButton.click();
 		
 		WebElement firstName = driver.findElement(By.id("firstNameField")); 
-		firstName.sendKeys("Vaishali");
+		firstName.sendKeys("Manikandan");
 		
 		WebElement lastName = driver.findElement(By.id("lastNameField")); 
-		lastName.sendKeys("Sowmiyan");
+		lastName.sendKeys("C");
 		
 		WebElement firstNameLocal = driver.findElement(By.id("createContactForm_firstNameLocal"));
-		firstNameLocal.sendKeys("Vaishu");
+		firstNameLocal.sendKeys("Mani");
 		
 		WebElement lastNameLocal = driver.findElement(By.id("createContactForm_lastNameLocal"));
-		lastNameLocal.sendKeys("Sowmiyan");
+		lastNameLocal.sendKeys("Chandru");
 	
 		WebElement departName = driver.findElement(By.id("createContactForm_departmentName"));
-		departName.sendKeys("Testing");
+		departName.sendKeys("software testing");
 	
-		WebElement description = driver.findElement(By.id("createContactForm_description"));
-		description.sendKeys("It involves execution of software/system components using manual or automated tools to evaluate one or more properties of interest. ");
+	WebElement description = driver.findElement(By.id("createContactForm_description"));
+		description.sendKeys("To find defects");
 	
 		WebElement email = driver.findElement(By.id("createContactForm_primaryEmail"));
-		email.sendKeys("vaishufoodie30@gmail.com");
+		email.sendKeys("mani.3102@gmail.com");
 	
 		WebElement stateOrProvince = driver.findElement(By.id("createContactForm_generalStateProvinceGeoId"));
-	    Select state=new Select(stateOrProvince) ;
-        state.selectByVisibleText("New York");
+	        Select state=new Select(stateOrProvince) ;
+                state.selectByVisibleText("New York");
 	
-        WebElement submit = driver.findElement(By.name("submitButton"));
+                WebElement submit = driver.findElement(By.name("submitButton"));
 		submit.click();
         
 		WebElement edit = driver.findElement(By.className("subMenuButton"));
@@ -66,7 +65,7 @@ public class CreateContact {
 		clearDes.clear();
 		
 		WebElement importantNote = driver.findElement(By.id("updateContactForm_importantNote"));
-		importantNote.sendKeys("Thank you for choosing out testleaf");
+		importantNote.sendKeys("Thank you");
 		
 		WebElement update = driver.findElement(By.xpath("//input[@value='Update']"));
 		update.click();
