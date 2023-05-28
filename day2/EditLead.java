@@ -7,7 +7,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class EditLead {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		ChromeDriver driver= new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/login");
@@ -15,8 +14,8 @@ public class EditLead {
 		WebElement username= driver.findElement(By.id("username"));
 		username.sendKeys("DemoSalesManager");
         
-        WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys("crmsfa");
+                WebElement password = driver.findElement(By.id("password"));
+                password.sendKeys("crmsfa");
         
 		WebElement loginButton = driver.findElement(By.className("decorativeSubmit"));
 		loginButton.click();
@@ -31,46 +30,46 @@ public class EditLead {
 		findLeads.click();
 		
 		WebElement firstName = driver.findElement(By.id("ext-gen248"));
-        firstName.sendKeys("Vaishali");
+                firstName.sendKeys("Manikandan");
         
-        WebElement FindLeadsButton = driver.findElement(By.xpath("//button[contains(text(),'Find Leads')]"));
-        FindLeadsButton.click();
+                WebElement FindLeadsButton = driver.findElement(By.xpath("//button[contains(text(),'Find Leads')]"));
+                FindLeadsButton.click();
         
-        WebElement firstLead = driver.findElement(By.xpath("(//a[text()='hareeharan'])[1]"));
-        firstLead.click();
+                WebElement firstLead = driver.findElement(By.xpath("(//a[text()='VeeraManikandan'])[1]"));
+                firstLead.click();
         
-        String pageTitle = driver.getTitle();
-        System.out.println(pageTitle);
-        if(pageTitle.contains("View Lead")) {
-			System.out.println("title is verified");
+                String pageTitle = driver.getTitle();
+                System.out.println(pageTitle);
+                if(pageTitle.contains("View Lead")) {
+			System.out.println("verified");
 		}else {
-			System.out.println("title is NOT verified");
+			System.out.println("Not verified");
 		}
        
         
         
-        WebElement edit = driver.findElement(By.linkText("Edit"));
-        edit.click();
+                WebElement edit = driver.findElement(By.linkText("Edit"));
+                edit.click();
       
         
-        WebElement companyName = driver.findElement(By.id("updateLeadForm_companyName"));
-        companyName.clear();
-        companyName.sendKeys("leaftaps1000");
+                WebElement companyName = driver.findElement(By.id("updateLeadForm_companyName"));
+                companyName.clear();
+                companyName.sendKeys("leaftaps1000");
         
         
-        WebElement update = driver.findElement(By.name("submitButton"));
-        update.click();
+                WebElement update = driver.findElement(By.name("submitButton"));
+                update.click();
         
-        WebElement changedCompName = driver.findElement(By.id("viewLead_companyName_sp"));
-        String text = changedCompName.getText();
-        System.out.println(text);
+                WebElement changedCompName = driver.findElement(By.id("viewLead_companyName_sp"));
+                String text = changedCompName.getText();
+                System.out.println(text);
        
-        if(text.contains("leaftaps")) {
+                if(text.contains("leaftaps")) {
         	System.out.println("Company Name is Verified");
 			
 		}else {
 			System.out.println("Company Name is NOT Verified");
 		}
-        driver.quit();
-}
+                driver.quit();
+         }
 }
