@@ -7,21 +7,15 @@ import org.openqa.selenium.support.ui.Select;
 public class RadioButton {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-		
 		
 		ChromeDriver driver = new ChromeDriver();
-
-		
-		driver.get("https://www.leafground.com/select.xhtml");
-		
 		driver.get("https://www.leafground.com/radio.xhtml");
 		driver.manage().window().maximize();
 		
 		driver.findElement(By.xpath("//label[text()='Edge']")).click();
 		
 		driver.findElement(By.xpath("//label[text()='Hyderabad']")).click();
-	//unselected
+	
 		String unselected =driver.findElement(By.xpath("//label[text()='Bengaluru']")).getAttribute("value");
 		String unselected1=driver.findElement(By.xpath("//label[text()='Chennai']")).getAttribute("value");
 		System.out.println("unselected="+unselected + " , " +unselected1);
@@ -33,6 +27,7 @@ public class RadioButton {
 		boolean enabled=clicked.isEnabled();
 		System.out.println(enabled);
 		Thread.sleep(3000);
-		driver.close();	}
+		driver.close();	
+	}
 
 }
